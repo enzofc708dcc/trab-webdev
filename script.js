@@ -29,7 +29,7 @@ var etapas = null
 var numeroDigitado = ''
 var votoEmBranco = false
 
-ajax('etapas.json', 'GET', (response) => {
+ajax(`fill_json.php`, 'GET', (response) => {
   etapas = JSON.parse(response)
   console.log(etapas)
 
