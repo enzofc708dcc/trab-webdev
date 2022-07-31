@@ -55,7 +55,7 @@ if($result->num_rows > 1){
 else if($result->num_rows == 1){
     $row = $result->fetch_assoc();
     $response["vereador"]["result"] = "vitoria";
-    $response["vereador"]["vencedor"] = $row["Nome"];
+    $response["vereador"]["vencedor"] = utf8_encode($row["Nome"]);
     $response["vereador"]["numVotos"] = $row["Votos"];
 }
 else{
