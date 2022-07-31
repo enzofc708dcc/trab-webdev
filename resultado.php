@@ -46,7 +46,7 @@ if($result->num_rows > 1){
     $vencedores = [];
     $votos = 0;
     while($row = $result->fetch_assoc()){
-        array_push($vencedores, $row["Nome"]);
+        array_push($vencedores, utf8_encode($row["Nome"]));
         $votos = $row["Votos"];
     }
     $response["vereador"]["vencedor"] = $vencedores;
@@ -71,7 +71,7 @@ if($result->num_rows > 1){
     $vencedores = [];
     $votos = 0;
     while($row = $result->fetch_assoc()){
-        array_push($vencedores, $row["Nome"]);
+        array_push($vencedores, utf8_encode($row["Nome"]));
         $votos = $row["Votos"];
     }
     $response["prefeito"]["vencedor"] = $vencedores;
