@@ -207,32 +207,18 @@ function confirmar() {
 
   if (numeroDigitado.length == etapa['numeros']) {
     if (etapa['candidatos'][numeroDigitado]) {
-      // Votou em candidato
-      votos.push({
-        'etapa': etapa['titulo'],
-        'numero': numeroDigitado
-      })
-      if(parseInt(numeroDigitado) < 100){
-        localStorage.votosP += numeroDigitado + " "
-      }
-      else{
-        localStorage.votosV += numeroDigitado + " "
-      }
+      jsonRequest = JSON.stringify({"numero":numeroDigitado, "titulo":etapa['titulo']});
+      ajax(`registra_voto.php`, 'POST', jsonRequest);
       console.log(`Votou em ${numeroDigitado}`)
     } else {
-      // Votou nulo
-      votos.push({
-        'etapa': etapa['titulo'],
-        'numero': null
-      })
+      jsonRequest = JSON.stringify({"numero":"nulo", "titulo":etapa['titulo']});
+      ajax(`registra_voto.php`, 'POST', () => {}, jsonRequest);
       console.log('Votou Nulo')
     }
   } else if (votoEmBranco) {
     // Votou em branco
-      votos.push({
-        'etapa': etapa['titulo'],
-        'numero': ''
-      })
+      jsonRequest = JSON.stringify({"numero":"branco", "titulo":etapa['titulo']});
+      ajax(`registra_voto.php`, 'POST', () => {}, jsonRequest);
       console.log('Votou em Branco')
   } else {
     // Voto não pode ser confirmado

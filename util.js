@@ -1,4 +1,4 @@
-function ajax(url, method, callback) {
+function ajax(url, method, callback, body = null) {
     let request = new XMLHttpRequest();
     request.overrideMimeType("application/json");
     request.open(method, url, true);
@@ -7,5 +7,5 @@ function ajax(url, method, callback) {
           callback(request.responseText);
       }
     };
-    request.send(null);
+    request.send(body);
   }
