@@ -1,3 +1,23 @@
+/**
+ * @file script.js
+ *
+ * Summary.
+ * <p>Responsável pelo funcionamento e da interação do frontend com o usuário</p>
+ *
+ *  Description.
+ *  <p>Essa classe serve para processar os toques nos botões pelo usuário, além da exibição de fotos, nomes e números dos candidatos.</p>
+ *
+ * @link      https://github.com/enzofc708dcc/trab-webdev/blob/master/script.js
+ * @see       https://github.com/enzofc708dcc/trab-webdev/blob/master/resultado.php
+ * @see       https://github.com/enzofc708dcc/trab-webdev/blob/master/registra_voto.php
+ * @see       https://github.com/enzofc708dcc/trab-webdev/blob/master/index.php
+ * @see       https://github.com/enzofc708dcc/trab-webdev/blob/master/fill_json.php
+ * @see       https://github.com/enzofc708dcc/trab-webdev/blob/master/util.js
+ *  @author Paulo Roma, adaptado por Felipe Pestana Rosa e Enzo Ferreira Carnevali
+ *  @since 31/07/2022
+ */
+
+
 const rVotoPara = document.querySelector('.esquerda .rotulo.r1 span')
 const rCargo = document.querySelector('.esquerda .rotulo.r2 span')
 const numeros = document.querySelector('.esquerda .rotulo.r3')
@@ -29,6 +49,9 @@ var etapas = null
 var numeroDigitado = ''
 var votoEmBranco = false
 
+/**
+ * Chama o ajax para fazer consultas do banco de dados
+ */
 ajax(`fill_json.php`, 'GET', (response) => {
   etapas = JSON.parse(response)
   console.log(etapas)
@@ -52,7 +75,7 @@ window.onload = () => {
 }
 
 /**
- * Inicia a etapa atual.
+ * Inicia a etapa atual da votação.
  */
 function comecarEtapa() {
   let etapa = etapas[etapaAtual]
@@ -245,6 +268,9 @@ function getOccurrence(array, value) {
     return count;
 }
 
+/**
+ * Retorna o resultado da votação e o imprime na tela
+ */
 function resultado(){
 
   
