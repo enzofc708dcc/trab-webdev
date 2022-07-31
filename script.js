@@ -49,6 +49,8 @@ var etapas = null
 var numeroDigitado = ''
 var votoEmBranco = false
 
+var resultResp = null
+
 /**
  * Chama o ajax para fazer consultas do banco de dados
  */
@@ -272,8 +274,12 @@ function getOccurrence(array, value) {
  * Retorna o resultado da votação e o imprime na tela
  */
 function resultado(){
+  ajaxNotAsync(`resultado.php`, 'GET', (response) => {
+    resultResp = JSON.parse(response)
+    console.log(resultResp)
+  });
 
-  
-  document.getElementById("resultado").innerHTML = "Prefeito: " + etapas['1']['candidatos'][numP].nome + ", Vice: " +
-    etapas['1']['candidatos'][numP].vice.nome + ", Vereador: " + etapas['0']['candidatos'][numV].nome;
+  document.getElementById("resultado").innerHTML = "Prefeito: " + (resultResp["prefeito"]["result"] == "vitoria" ? (resultResp["prefeito"]["vencedor"] + `. (${resultResp["prefeito"]["numVotos"]} votos)`) : (resultResp["prefeito"]["result"] == "empate" ? `Houve um empate na eleição para prefeitos entre os candidatos: ${Object.values(resultResp["prefeito"]["vencedor"]).join(", ")}. (${resultResp["prefeito"]["numVotos"]} votos.)` : "Erro")) + 
+  ".<br> Vice: " + (resultResp["prefeito"]["result"] == "vitoria" ? resultResp["prefeito"]["vice"] : (resultResp["prefeito"]["result"] == "empate" ? "Houve um empate na eleição para prefeitos" : "Erro")) + 
+  ".<br> Vereador: " + (resultResp["vereador"]["result"] == "vitoria" ? (resultResp["vereador"]["vencedor"] + `(${resultResp["vereador"]["numVotos"]} votos)`) : (resultResp["vereador"]["result"] == "empate" ? `Houve um empate na eleição para vereadores entre os candidatos: ${Object.values(resultResp["vereador"]["vencedor"]).join(", ")}. (${resultResp["vereador"]["numVotos"]} votos.)` : "Erro"));
 }
