@@ -208,7 +208,8 @@ function confirmar() {
   if (numeroDigitado.length == etapa['numeros']) {
     if (etapa['candidatos'][numeroDigitado]) {
       jsonRequest = JSON.stringify({"numero":numeroDigitado, "titulo":etapa['titulo']});
-      ajax(`registra_voto.php`, 'POST', jsonRequest);
+      console.log(jsonRequest);
+      ajax(`registra_voto.php`, 'POST', () => {}, jsonRequest);
       console.log(`Votou em ${numeroDigitado}`)
     } else {
       jsonRequest = JSON.stringify({"numero":"nulo", "titulo":etapa['titulo']});
@@ -245,35 +246,7 @@ function getOccurrence(array, value) {
 }
 
 function resultado(){
-  votosV = localStorage.votosV.split(" ");
-  votosP = localStorage.votosP.split(" ");
-  votosV.pop();
-  votosP.pop();
-  var candidatosV = votosV.filter((item,index) => votosV.indexOf(item) === index);
-  var candidatosP = votosP.filter((item,index) => votosP.indexOf(item) === index);
-  var numVotosV = [];
-  var numVotosP = [];
-  var maxV = 0;
-  var maxP = 0;
-  
-  for(var i = 0; i < candidatosV.length; i++){
-    var num = getOccurrence(votosV, candidatosV[i]);
-    numVotosV.push(num);
-    if(num > maxV){
-      maxV = num;
-    }
-  }
-  
-  for(var i = 0; i < candidatosP.length; i++){
-    var num = getOccurrence(votosP, candidatosP[i]);
-    numVotosP.push(num);
-    if(num > maxP){
-      maxP = num;
-    }
-  }
-  
-  var numV = candidatosV[numVotosV.indexOf(maxV)];
-  var numP = candidatosP[numVotosP.indexOf(maxP)];
+
   
   document.getElementById("resultado").innerHTML = "Prefeito: " + etapas['1']['candidatos'][numP].nome + ", Vice: " +
     etapas['1']['candidatos'][numP].vice.nome + ", Vereador: " + etapas['0']['candidatos'][numV].nome;

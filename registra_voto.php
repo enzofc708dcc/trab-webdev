@@ -1,7 +1,7 @@
 <?php 
 $server = "localhost";
-$username = "urna_app";
-$password = "urna_app";
+$username = "root";
+$password = "";
 $db = "urna_eletronica";
 
 // $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -13,26 +13,22 @@ $db = "urna_eletronica";
 
 $conn = new mysqli($server, $username, $password, $db);
 
-$numVoto = $_POST["numero"];
-$titulo = $_POST["titulo"];
+$data = json_decode(file_get_contents('php://input'), true);
 
-$fp = fopen('lidn.txt', 'w');
-fwrite($fp, $numVoto);
-fwrite($fp, $titulo);
-fclose($fp);
+$numVoto = $data["numero"];
+$titulo = $data["titulo"];
 
 if($titulo == "vereador"){
     if($numVoto == "branco"){
         if(!$result = $conn->query("UPDATE vereadores SET Votos = Votos + 1 WHERE Nome = 'Branco';")) {
             echo "Update failed: (" . $conn->errno . ") " . $conn->error;
         }
-        $result->close();
     }
-    else if($numVoto = "nulo"){
+    else if($numVoto == "nulo"){
+        echo "wtf pq eu entrei?";
         if(!$result = $conn->query("UPDATE vereadores SET Votos = Votos + 1 WHERE Nome = 'Nulo';")) {
             echo "Update failed: (" . $conn->errno . ") " . $conn->error;
         }
-        $result->close();
     }
     else{
         if(!$stmt = $conn->prepare("UPDATE vereadores SET Votos = Votos + 1 WHERE Numero = ?;")) {
@@ -46,7 +42,6 @@ if($titulo == "vereador"){
         if (!$stmt->execute()) {
             echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
         }
-        $stmt->close();
     }
 }
 else if($titulo == "prefeito"){
@@ -55,7 +50,7 @@ else if($titulo == "prefeito"){
             echo "Update failed: (" . $conn->errno . ") " . $conn->error;
         }
     }
-    else if($numVoto = "nulo"){
+    else if($numVoto == "nulo"){
         if(!$result = $conn->query("UPDATE prefeitos SET Votos = Votos + 1 WHERE Nome = 'Nulo';")) {
             echo "Update failed: (" . $conn->errno . ") " . $conn->error;
         }

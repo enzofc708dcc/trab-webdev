@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$username = "urna_app";
-$password = "urna_app";
+$username = "root";
+$password = "";
 $db = "urna_eletronica";
 
 // $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -13,11 +13,6 @@ $db = "urna_eletronica";
 
 $conn = new mysqli($server, $username, $password, $db);
 $targetJson = [];
-
-$fp = fopen('lidn.txt', 'w');
-fwrite($fp, $numVoto);
-fwrite($fp, $titulo);
-fclose($fp);
 
 if ($conn->connect_errno) {
   echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
@@ -34,9 +29,9 @@ $targetJson["0"]["candidatos"] = [];
 
 while($row = $result->fetch_assoc()){
     $candNum = $row["Numero"];
-    $targetJson["0"]["candidatos"][$candNum]["nome"] = $row["Nome"];
-    $targetJson["0"]["candidatos"][$candNum]["partido"] = $row["Partido"];
-    $targetJson["0"]["candidatos"][$candNum]["foto"] = $row["Url_Foto"];
+    $targetJson["0"]["candidatos"][$candNum]["nome"] = utf8_encode($row["Nome"]);
+    $targetJson["0"]["candidatos"][$candNum]["partido"] = utf8_encode($row["Partido"]);
+    $targetJson["0"]["candidatos"][$candNum]["foto"] = utf8_encode($row["Url_Foto"]);
 }
 
 $result->close();
@@ -50,14 +45,16 @@ $targetJson["1"]["titulo"] = "prefeito";
 $targetJson["1"]["numeros"] = 2;
 $targetJson["1"]["candidatos"] = [];
 
+
+
 while($row = $result->fetch_assoc()){
     $candNum = $row["pNumero"];
-    $targetJson["1"]["candidatos"][$candNum]["nome"] = $row["pNome"];
-    $targetJson["1"]["candidatos"][$candNum]["partido"] = $row["pPartido"];
-    $targetJson["1"]["candidatos"][$candNum]["foto"] = $row["pUrl_Foto"];
-    $targetJson["1"]["candidatos"][$candNum]["vice"]["nome"] = $row["vNome"];
-    $targetJson["1"]["candidatos"][$candNum]["vice"]["partido"] = $row["vPartido"];
-    $targetJson["1"]["candidatos"][$candNum]["vice"]["foto"] = $row["vUrl_Foto"];
+    $targetJson["1"]["candidatos"][$candNum]["nome"] = utf8_encode($row["pNome"]);
+    $targetJson["1"]["candidatos"][$candNum]["partido"] = utf8_encode($row["pPartido"]);
+    $targetJson["1"]["candidatos"][$candNum]["foto"] = utf8_encode($row["pUrl_Foto"]);
+    $targetJson["1"]["candidatos"][$candNum]["vice"]["nome"] = utf8_encode($row["vNome"]);
+    $targetJson["1"]["candidatos"][$candNum]["vice"]["partido"] = utf8_encode($row["vPartido"]);
+    $targetJson["1"]["candidatos"][$candNum]["vice"]["foto"] = utf8_encode($row["vUrl_Foto"]);
 }
 
 $result->close();

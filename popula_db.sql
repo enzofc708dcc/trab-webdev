@@ -10,7 +10,7 @@ CREATE TABLE vereadores(
 );
 
 CREATE TABLE vice_prefeitos(
-	ID int PRIMARY KEY AUTO_INCREMENT,
+	ID int PRIMARY KEY,
 	Nome varchar(50),
 	Partido varchar(20),
 	Url_Foto varchar(1000)
@@ -40,13 +40,13 @@ VALUES
 	(NULL, 'Nulo', NULL, NULL),
 	(NULL, 'Branco', NULL, NULL);
 
-INSERT INTO vice_prefeitos(Nome, Partido, Url_Foto)
+INSERT INTO vice_prefeitos(ID,Nome, Partido, Url_Foto)
 VALUES
-	('Arão', 'PRP', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v3.jpg?v=1659026283582'),
-	('Biga', 'MDB', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v2.jpg?v=1659026281145'),
-	('João Rodrigues', 'PV', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v1.jpg?v=1659026278850'),
-	('Francisca Ferreira Ramos', 'PPL', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v4.jpg?v=1659026286366'),
-	('Malú', 'PC do B', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v5.jpg?v=1659026288547');
+	(1,'Arão', 'PRP', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v3.jpg?v=1659026283582'),
+	(2,'Biga', 'MDB', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v2.jpg?v=1659026281145'),
+	(3,'João Rodrigues', 'PV', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v1.jpg?v=1659026278850'),
+	(4,'Francisca Ferreira Ramos', 'PPL', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v4.jpg?v=1659026286366'),
+	(5,'Malú', 'PC do B', 'https://cdn.glitch.global/f92a5083-3c9d-44ad-9c28-36ed56ff4e7e/v5.jpg?v=1659026288547');
 
 INSERT INTO prefeitos(Numero, Nome, Partido, Url_Foto, ViceID)
 VALUES
