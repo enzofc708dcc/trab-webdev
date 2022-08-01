@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Urna Eletrônica: Código-Fonte de Web/resultado.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Urna Eletrônica<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8069eed1070612d812aa4ab345356666.html">Web</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">resultado.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="resultado_8php.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="resultado_8php.html#acf215f34a917d014776ce684a9ee8909">   25</a></span><a class="code hl_variable" href="resultado_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a> = parse_url(getenv(<span class="stringliteral">&quot;CLEARDB_DATABASE_URL&quot;</span>));</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="resultado_8php.html#ad135cc8a47e55f0829949cf62214170f">   27</a></span><a class="code hl_variable" href="resultado_8php.html#ad135cc8a47e55f0829949cf62214170f">$server</a> = <a class="code hl_variable" href="resultado_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a>[<span class="stringliteral">&quot;host&quot;</span>];</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="resultado_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">   28</a></span><a class="code hl_variable" href="resultado_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a> = <a class="code hl_variable" href="resultado_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a>[<span class="stringliteral">&quot;user&quot;</span>];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="resultado_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">   29</a></span><a class="code hl_variable" href="resultado_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = <a class="code hl_variable" href="resultado_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a>[<span class="stringliteral">&quot;pass&quot;</span>];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="resultado_8php.html#a1fa3127fc82f96b1436d871ef02be319">   30</a></span><a class="code hl_variable" href="resultado_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a> = substr(<a class="code hl_variable" href="resultado_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a>[<span class="stringliteral">&quot;path&quot;</span>], 1);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">   32</a></span><a class="code hl_variable" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a> = <span class="keyword">new</span> mysqli(<a class="code hl_variable" href="resultado_8php.html#ad135cc8a47e55f0829949cf62214170f">$server</a>, <a class="code hl_variable" href="resultado_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a>, <a class="code hl_variable" href="resultado_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>, <a class="code hl_variable" href="resultado_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordflow">if</span> (<a class="code hl_variable" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;connect_errno) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    echo <span class="stringliteral">&quot;Failed to connect to MySQL: (&quot;</span> . $mysqli-&gt;connect_errno . <span class="stringliteral">&quot;) &quot;</span> . $mysqli-&gt;connect_error;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordflow">if</span>(!$result = <a class="code hl_variable" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;query(<span class="stringliteral">&quot;SELECT Nome, Votos FROM vereadores WHERE Nome != &#39;Nulo&#39; and Nome != &#39;Branco&#39; and Votos = (SELECT Votos FROM vereadores WHERE Nome != &#39;Nulo&#39; and Nome != &#39;Branco&#39; order by Votos desc LIMIT 1);&quot;</span>)) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    echo <span class="stringliteral">&quot;Select failed: (&quot;</span> . <a class="code hl_variable" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;errno . <span class="stringliteral">&quot;) &quot;</span> . <a class="code hl_variable" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;error;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">   47</a></span><a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a> = [];</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordflow">if</span>($result-&gt;num_rows &gt; 1){</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;vereador&quot;</span>][<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;empate&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    $vencedores = [];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    $votos = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">while</span>($row = $result-&gt;fetch_assoc()){</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        array_push($vencedores, utf8_encode($row[<span class="stringliteral">&quot;Nome&quot;</span>]));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        $votos = $row[<span class="stringliteral">&quot;Votos&quot;</span>];</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;vereador&quot;</span>][<span class="stringliteral">&quot;vencedor&quot;</span>] = $vencedores;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;vereador&quot;</span>][<span class="stringliteral">&quot;numVotos&quot;</span>] = $votos;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordflow">else</span> <span class="keywordflow">if</span>($result-&gt;num_rows == 1){</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    $row = $result-&gt;fetch_assoc();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;vereador&quot;</span>][<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;vitoria&quot;</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;vereador&quot;</span>][<span class="stringliteral">&quot;vencedor&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;Nome&quot;</span>]);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;vereador&quot;</span>][<span class="stringliteral">&quot;numVotos&quot;</span>] = $row[<span class="stringliteral">&quot;Votos&quot;</span>];</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="resultado_8php.html#ad4df5de817c8a6b906d1ae7f5085fd27">   66</a></span><span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;vereador&quot;</span>][<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;error&quot;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordflow">if</span>(!$result = <a class="code hl_variable" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;query(<span class="stringliteral">&quot;SELECT p.Nome, p.Votos, v.Nome as vNome FROM prefeitos p JOIN vice_prefeitos v on p.ViceID = v.ID WHERE p.Nome != &#39;Nulo&#39; and p.Nome != &#39;Branco&#39; and p.Votos = (SELECT Votos FROM prefeitos WHERE Nome != &#39;Nulo&#39; and Nome != &#39;Branco&#39; order by Votos desc LIMIT 1);&quot;</span>)) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    echo <span class="stringliteral">&quot;Select failed: (&quot;</span> . <a class="code hl_variable" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;errno . <span class="stringliteral">&quot;) &quot;</span> . <a class="code hl_variable" href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;error;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordflow">if</span>($result-&gt;num_rows &gt; 1){</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;empate&quot;</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    $vencedores = [];</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    $votos = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">while</span>($row = $result-&gt;fetch_assoc()){</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        array_push($vencedores, utf8_encode($row[<span class="stringliteral">&quot;Nome&quot;</span>]));</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        $votos = $row[<span class="stringliteral">&quot;Votos&quot;</span>];</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;vencedor&quot;</span>] = $vencedores;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;vice&quot;</span>] = <span class="stringliteral">&quot;Houve um empate na eleição para prefeitos.&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;numVotos&quot;</span>] = $votos;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keywordflow">else</span> <span class="keywordflow">if</span>($result-&gt;num_rows == 1){</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    $row = $result-&gt;fetch_assoc();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;vitoria&quot;</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;vencedor&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;Nome&quot;</span>]);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;vice&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;vNome&quot;</span>]);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;numVotos&quot;</span>] = $row[<span class="stringliteral">&quot;Votos&quot;</span>];</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>[<span class="stringliteral">&quot;prefeito&quot;</span>][<span class="stringliteral">&quot;result&quot;</span>] = <span class="stringliteral">&quot;error&quot;</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>echo json_encode(<a class="code hl_variable" href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a>, JSON_FORCE_OBJECT);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>?&gt;</div>
+<div class="ttc" id="aresultado_8php_html_a0eb82aa5f81cf845de4b36cd653c42cf"><div class="ttname"><a href="resultado_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a></div><div class="ttdeci">$username</div><div class="ttdef"><b>Definition:</b> <a href="resultado_8php_source.html#l00028">resultado.php:28</a></div></div>
+<div class="ttc" id="aresultado_8php_html_a1fa3127fc82f96b1436d871ef02be319"><div class="ttname"><a href="resultado_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a></div><div class="ttdeci">$db</div><div class="ttdef"><b>Definition:</b> <a href="resultado_8php_source.html#l00030">resultado.php:30</a></div></div>
+<div class="ttc" id="aresultado_8php_html_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><div class="ttname"><a href="resultado_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a></div><div class="ttdeci">$password</div><div class="ttdef"><b>Definition:</b> <a href="resultado_8php_source.html#l00029">resultado.php:29</a></div></div>
+<div class="ttc" id="aresultado_8php_html_a75f3aa65a2d3fb442fb36068f96ee4ed"><div class="ttname"><a href="resultado_8php.html#a75f3aa65a2d3fb442fb36068f96ee4ed">$response</a></div><div class="ttdeci">if( $conn-&gt;connect_errno) if(! $result=$conn-&gt;query(&quot;SELECT Nome, Votos FROM vereadores WHERE Nome != 'Nulo' and Nome != 'Branco' and Votos = (SELECT Votos FROM vereadores WHERE Nome != 'Nulo' and Nome != 'Branco' order by Votos desc LIMIT 1);&quot;)) $response</div><div class="ttdef"><b>Definition:</b> <a href="resultado_8php_source.html#l00047">resultado.php:47</a></div></div>
+<div class="ttc" id="aresultado_8php_html_aa8a5a87b9c1a6a0819b88447cbe41877"><div class="ttname"><a href="resultado_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a></div><div class="ttdeci">$conn</div><div class="ttdef"><b>Definition:</b> <a href="resultado_8php_source.html#l00032">resultado.php:32</a></div></div>
+<div class="ttc" id="aresultado_8php_html_acf215f34a917d014776ce684a9ee8909"><div class="ttname"><a href="resultado_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a></div><div class="ttdeci">$url</div><div class="ttdef"><b>Definition:</b> <a href="resultado_8php_source.html#l00025">resultado.php:25</a></div></div>
+<div class="ttc" id="aresultado_8php_html_ad135cc8a47e55f0829949cf62214170f"><div class="ttname"><a href="resultado_8php.html#ad135cc8a47e55f0829949cf62214170f">$server</a></div><div class="ttdeci">$server</div><div class="ttdef"><b>Definition:</b> <a href="resultado_8php_source.html#l00027">resultado.php:27</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

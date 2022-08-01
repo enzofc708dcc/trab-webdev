@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Urna Eletrônica: Código-Fonte de Web/fill_json.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Urna Eletrônica<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8069eed1070612d812aa4ab345356666.html">Web</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">fill_json.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="fill__json_8php.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="fill__json_8php.html#acf215f34a917d014776ce684a9ee8909">   24</a></span><a class="code hl_variable" href="fill__json_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a> = parse_url(getenv(<span class="stringliteral">&quot;CLEARDB_DATABASE_URL&quot;</span>));</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="fill__json_8php.html#ad135cc8a47e55f0829949cf62214170f">   27</a></span><a class="code hl_variable" href="fill__json_8php.html#ad135cc8a47e55f0829949cf62214170f">$server</a> = <a class="code hl_variable" href="fill__json_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a>[<span class="stringliteral">&quot;host&quot;</span>];</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">   28</a></span><a class="code hl_variable" href="fill__json_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a> = <a class="code hl_variable" href="fill__json_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a>[<span class="stringliteral">&quot;user&quot;</span>];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">   29</a></span><a class="code hl_variable" href="fill__json_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = <a class="code hl_variable" href="fill__json_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a>[<span class="stringliteral">&quot;pass&quot;</span>];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a1fa3127fc82f96b1436d871ef02be319">   30</a></span><a class="code hl_variable" href="fill__json_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a> = substr(<a class="code hl_variable" href="fill__json_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a>[<span class="stringliteral">&quot;path&quot;</span>], 1);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">   32</a></span><a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a> = <span class="keyword">new</span> mysqli(<a class="code hl_variable" href="fill__json_8php.html#ad135cc8a47e55f0829949cf62214170f">$server</a>, <a class="code hl_variable" href="fill__json_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a>, <a class="code hl_variable" href="fill__json_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>, <a class="code hl_variable" href="fill__json_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">   33</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a> = [];</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordflow">if</span> (<a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;connect_errno) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  echo <span class="stringliteral">&quot;Failed to connect to MySQL: (&quot;</span> . $mysqli-&gt;connect_errno . <span class="stringliteral">&quot;) &quot;</span> . $mysqli-&gt;connect_error;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordflow">if</span>(!$result = <a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;query(<span class="stringliteral">&quot;SELECT Nome, Numero, Partido, Url_Foto FROM vereadores WHERE Nome != &#39;Nulo&#39; and Nome != &#39;Branco&#39;;&quot;</span>)) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    echo <span class="stringliteral">&quot;Select failed: (&quot;</span> . <a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;errno . <span class="stringliteral">&quot;) &quot;</span> . <a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;error;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a8dbafffd2312999e97443d9b4f8d34f3">   46</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;0&quot;</span>] = [];</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a5844127f22f9e80fe355a0d6b1b7e509">   47</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;0&quot;</span>][<span class="stringliteral">&quot;titulo&quot;</span>] = <span class="stringliteral">&quot;vereador&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a535621f48ec1269ecd191a3cf1f6292f">   48</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;0&quot;</span>][<span class="stringliteral">&quot;numeros&quot;</span>] = 5;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a16e8c0fd6506962ca8ba3065c4d644de">   49</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;0&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>] = [];</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordflow">while</span>($row = $result-&gt;fetch_assoc()){</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    $candNum = $row[<span class="stringliteral">&quot;Numero&quot;</span>];</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;0&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;nome&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;Nome&quot;</span>]);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;0&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;partido&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;Partido&quot;</span>]);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;0&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;foto&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;Url_Foto&quot;</span>]);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>$result-&gt;close();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordflow">if</span>(!$result = <a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;query(<span class="stringliteral">&quot;SELECT p.Nome pNome, p.Numero pNumero, p.Partido pPartido, p.Url_Foto pUrl_Foto, v.Nome vNome, v.Partido vPartido, v.Url_Foto vUrl_Foto FROM prefeitos p JOIN vice_prefeitos v on p.ViceID = v.ID WHERE p.Nome != &#39;Nulo&#39; and p.Nome != &#39;Branco&#39;;&quot;</span>)) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    echo <span class="stringliteral">&quot;Select failed: (&quot;</span> . <a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;errno . <span class="stringliteral">&quot;) &quot;</span> . <a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;error;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a74bddfbe0eef69a8cc17095f2cb42ed9">   68</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>] = [];</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a09899f35f37e86bd5b9fe0c5e373507c">   69</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;titulo&quot;</span>] = <span class="stringliteral">&quot;prefeito&quot;</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="fill__json_8php.html#a696b5ffb02fe8e5a7983291f36e905b8">   70</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;numeros&quot;</span>] = 2;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="fill__json_8php.html#ae474e3f6dbbada239d455ea6d1ad56ba">   71</a></span><a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>] = [];</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordflow">while</span>($row = $result-&gt;fetch_assoc()){</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    $candNum = $row[<span class="stringliteral">&quot;pNumero&quot;</span>];</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;nome&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;pNome&quot;</span>]);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;partido&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;pPartido&quot;</span>]);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;foto&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;pUrl_Foto&quot;</span>]);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;vice&quot;</span>][<span class="stringliteral">&quot;nome&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;vNome&quot;</span>]);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;vice&quot;</span>][<span class="stringliteral">&quot;partido&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;vPartido&quot;</span>]);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>[<span class="stringliteral">&quot;1&quot;</span>][<span class="stringliteral">&quot;candidatos&quot;</span>][$candNum][<span class="stringliteral">&quot;vice&quot;</span>][<span class="stringliteral">&quot;foto&quot;</span>] = utf8_encode($row[<span class="stringliteral">&quot;vUrl_Foto&quot;</span>]);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>$result-&gt;close();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><a class="code hl_variable" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a>-&gt;close();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>echo json_encode(<a class="code hl_variable" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a>, JSON_FORCE_OBJECT);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>?&gt;</div>
+<div class="ttc" id="afill__json_8php_html_a0eb82aa5f81cf845de4b36cd653c42cf"><div class="ttname"><a href="fill__json_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a></div><div class="ttdeci">$username</div><div class="ttdef"><b>Definition:</b> <a href="fill__json_8php_source.html#l00028">fill_json.php:28</a></div></div>
+<div class="ttc" id="afill__json_8php_html_a1fa3127fc82f96b1436d871ef02be319"><div class="ttname"><a href="fill__json_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a></div><div class="ttdeci">$db</div><div class="ttdef"><b>Definition:</b> <a href="fill__json_8php_source.html#l00030">fill_json.php:30</a></div></div>
+<div class="ttc" id="afill__json_8php_html_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><div class="ttname"><a href="fill__json_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a></div><div class="ttdeci">$password</div><div class="ttdef"><b>Definition:</b> <a href="fill__json_8php_source.html#l00029">fill_json.php:29</a></div></div>
+<div class="ttc" id="afill__json_8php_html_a6e5c4028742bbbc3bdadbfd4751577d0"><div class="ttname"><a href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a></div><div class="ttdeci">$targetJson</div><div class="ttdef"><b>Definition:</b> <a href="fill__json_8php_source.html#l00033">fill_json.php:33</a></div></div>
+<div class="ttc" id="afill__json_8php_html_aa8a5a87b9c1a6a0819b88447cbe41877"><div class="ttname"><a href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a></div><div class="ttdeci">$conn</div><div class="ttdef"><b>Definition:</b> <a href="fill__json_8php_source.html#l00032">fill_json.php:32</a></div></div>
+<div class="ttc" id="afill__json_8php_html_acf215f34a917d014776ce684a9ee8909"><div class="ttname"><a href="fill__json_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a></div><div class="ttdeci">$url</div><div class="ttdef"><b>Definition:</b> <a href="fill__json_8php_source.html#l00024">fill_json.php:24</a></div></div>
+<div class="ttc" id="afill__json_8php_html_ad135cc8a47e55f0829949cf62214170f"><div class="ttname"><a href="fill__json_8php.html#ad135cc8a47e55f0829949cf62214170f">$server</a></div><div class="ttdeci">$server</div><div class="ttdef"><b>Definition:</b> <a href="fill__json_8php_source.html#l00027">fill_json.php:27</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>
