@@ -102,7 +102,7 @@
   </button>
   <div id="resultado"></div>
 
-  <div class="dochtml"><a href="https://trab-webdev.herokuapp.com/Documentacao JavaScript/index.html">Documentação JavaScript</a></div>
-  <div class="dochtml"><a href="https://trab-webdev.herokuapp.com/Documentacao PHP\html\index.html">Documentação JavaScript</a></div>
+  <div id="dochtml"><a href="https://trab-webdev.herokuapp.com/Documentacao JavaScript/index.html">Documentação JavaScript</a></div>
+  <div id="docphp"><a href="https://trab-webdev.herokuapp.com/Documentacao PHP\html\index.html">Documentação PHP</a></div>
 </body>
 </html>
