@@ -1,11 +1,39 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: script.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: script.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * @file script.js
  *
  *
- * <p>Responsável pelo funcionamento e da interação do frontend com o usuário</p>
+ * &lt;p>Responsável pelo funcionamento e da interação do frontend com o usuário&lt;/p>
  *
  * 
- *  <p>Essa classe serve para processar os toques nos botões pelo usuário, além da exibição de fotos, nomes e números dos candidatos.</p>
+ *  &lt;p>Essa classe serve para processar os toques nos botões pelo usuário, além da exibição de fotos, nomes e números dos candidatos.&lt;/p>
  *
  * @link      https://github.com/enzofc708dcc/trab-webdev/blob/master/script.js
  * @see       https://github.com/enzofc708dcc/trab-webdev/blob/master/resultado.php
@@ -97,10 +125,10 @@ function comecarEtapa() {
   rNomeVice.style.display = 'none'
   rRodape.style.display = 'none'
 
-  for (let i = 0; i < etapa['numeros']; i++) {
+  for (let i = 0; i &lt; etapa['numeros']; i++) {
     let pisca = i == 0 ? ' pisca' : ''
     numeros.innerHTML += `
-      <div class="numero${pisca}"></div>
+      &lt;div class="numero${pisca}">&lt;/div>
     `
   }
 
@@ -174,7 +202,7 @@ function clicar(value) {
   console.log(value)
 
   let elNum = document.querySelector('.esquerda .rotulo.r3 .numero.pisca')
-  if (elNum && ! votoEmBranco) {
+  if (elNum &amp;&amp; ! votoEmBranco) {
     numeroDigitado += (value)
     elNum.innerHTML = value
     elNum.classList.remove('pisca')
@@ -256,7 +284,7 @@ function confirmar() {
     etapaAtual++
   } else {
     document.querySelector('.tela').innerHTML = `
-      <div class="fim">FIM</div>
+      &lt;div class="fim">FIM&lt;/div>
     `
   }
 
@@ -266,7 +294,7 @@ function confirmar() {
 
 function getOccurrence(array, value) {
     var count = 0;
-    array.forEach((v) => (v === value && count++));
+    array.forEach((v) => (v === value &amp;&amp; count++));
     return count;
 }
 
@@ -280,6 +308,28 @@ function resultado(){
   });
 
   document.getElementById("resultado").innerHTML = "Prefeito: " + (resultResp["prefeito"]["result"] == "vitoria" ? (resultResp["prefeito"]["vencedor"] + `. (${resultResp["prefeito"]["numVotos"]} votos)`) : (resultResp["prefeito"]["result"] == "empate" ? `Houve um empate na eleição para prefeitos entre os candidatos: ${Object.values(resultResp["prefeito"]["vencedor"]).join(", ")}. (${resultResp["prefeito"]["numVotos"]} votos.)` : "Erro")) + 
-  ".<br> Vice: " + (resultResp["prefeito"]["result"] == "vitoria" ? resultResp["prefeito"]["vice"] : (resultResp["prefeito"]["result"] == "empate" ? "Houve um empate na eleição para prefeitos" : "Erro")) + 
-  ".<br> Vereador: " + (resultResp["vereador"]["result"] == "vitoria" ? (resultResp["vereador"]["vencedor"] + `(${resultResp["vereador"]["numVotos"]} votos)`) : (resultResp["vereador"]["result"] == "empate" ? `Houve um empate na eleição para vereadores entre os candidatos: ${Object.values(resultResp["vereador"]["vencedor"]).join(", ")}. (${resultResp["vereador"]["numVotos"]} votos.)` : "Erro"));
-}
+  ".&lt;br> Vice: " + (resultResp["prefeito"]["result"] == "vitoria" ? resultResp["prefeito"]["vice"] : (resultResp["prefeito"]["result"] == "empate" ? "Houve um empate na eleição para prefeitos" : "Erro")) + 
+  ".&lt;br> Vereador: " + (resultResp["vereador"]["result"] == "vitoria" ? (resultResp["vereador"]["vencedor"] + `(${resultResp["vereador"]["numVotos"]} votos)`) : (resultResp["vereador"]["result"] == "empate" ? `Houve um empate na eleição para vereadores entre os candidatos: ${Object.values(resultResp["vereador"]["vencedor"]).join(", ")}. (${resultResp["vereador"]["numVotos"]} votos.)` : "Erro"));
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#ajax">ajax</a></li><li><a href="global.html#ajaxNotAsync">ajaxNotAsync</a></li><li><a href="global.html#atualizarInterface">atualizarInterface</a></li><li><a href="global.html#branco">branco</a></li><li><a href="global.html#clicar">clicar</a></li><li><a href="global.html#comecarEtapa">comecarEtapa</a></li><li><a href="global.html#confirmar">confirmar</a></li><li><a href="global.html#corrigir">corrigir</a></li><li><a href="global.html#resultado">resultado</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Sun Jul 31 2022 21:48:28 GMT-0300 (Horário Padrão de Brasília)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Urna Eletrônica: Referência do Arquivo Web/fill_json.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Urna Eletrônica<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','Busca');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8069eed1070612d812aa4ab345356666.html">Web</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo fill_json.php</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:acf215f34a917d014776ce684a9ee8909"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a> = parse_url(getenv(&quot;CLEARDB_DATABASE_URL&quot;))</td></tr>
+<tr class="separator:acf215f34a917d014776ce684a9ee8909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad135cc8a47e55f0829949cf62214170f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#ad135cc8a47e55f0829949cf62214170f">$server</a> = $url[&quot;host&quot;]</td></tr>
+<tr class="separator:ad135cc8a47e55f0829949cf62214170f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb82aa5f81cf845de4b36cd653c42cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a> = $url[&quot;user&quot;]</td></tr>
+<tr class="separator:a0eb82aa5f81cf845de4b36cd653c42cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607686ef9f99ea7c42f4f3dd3dbb2b0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = $url[&quot;pass&quot;]</td></tr>
+<tr class="separator:a607686ef9f99ea7c42f4f3dd3dbb2b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa3127fc82f96b1436d871ef02be319"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a> = substr($url[&quot;path&quot;], 1)</td></tr>
+<tr class="separator:a1fa3127fc82f96b1436d871ef02be319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a> = new mysqli($server, $username, $password, $db)</td></tr>
+<tr class="separator:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5c4028742bbbc3bdadbfd4751577d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a6e5c4028742bbbc3bdadbfd4751577d0">$targetJson</a> = []</td></tr>
+<tr class="separator:a6e5c4028742bbbc3bdadbfd4751577d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dbafffd2312999e97443d9b4f8d34f3"><td class="memItemLeft" align="right" valign="top">if( $conn-&gt;connect_errno) if(! $result=$conn-&gt;query(&quot;SELECT Nome, Numero, Partido, Url_Foto FROM vereadores WHERE Nome != 'Nulo' and Nome != 'Branco';&quot;))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a8dbafffd2312999e97443d9b4f8d34f3">$targetJson</a> [&quot;0&quot;] = []</td></tr>
+<tr class="separator:a8dbafffd2312999e97443d9b4f8d34f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5844127f22f9e80fe355a0d6b1b7e509"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a5844127f22f9e80fe355a0d6b1b7e509">$targetJson</a> [&quot;0&quot;][&quot;titulo&quot;] = &quot;vereador&quot;</td></tr>
+<tr class="separator:a5844127f22f9e80fe355a0d6b1b7e509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a535621f48ec1269ecd191a3cf1f6292f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a535621f48ec1269ecd191a3cf1f6292f">$targetJson</a> [&quot;0&quot;][&quot;numeros&quot;] = 5</td></tr>
+<tr class="separator:a535621f48ec1269ecd191a3cf1f6292f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e8c0fd6506962ca8ba3065c4d644de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a16e8c0fd6506962ca8ba3065c4d644de">$targetJson</a> [&quot;0&quot;][&quot;candidatos&quot;] = []</td></tr>
+<tr class="separator:a16e8c0fd6506962ca8ba3065c4d644de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bddfbe0eef69a8cc17095f2cb42ed9"><td class="memItemLeft" align="right" valign="top">if(! $result=$conn-&gt;query(&quot;SELECT p.Nome pNome, p.Numero pNumero, p.Partido pPartido, p.Url_Foto pUrl_Foto, v.Nome vNome, v.Partido vPartido, v.Url_Foto vUrl_Foto FROM prefeitos p JOIN vice_prefeitos v on p.ViceID = v.ID WHERE p.Nome != 'Nulo' and p.Nome != 'Branco';&quot;))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a74bddfbe0eef69a8cc17095f2cb42ed9">$targetJson</a> [&quot;1&quot;] = []</td></tr>
+<tr class="separator:a74bddfbe0eef69a8cc17095f2cb42ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09899f35f37e86bd5b9fe0c5e373507c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a09899f35f37e86bd5b9fe0c5e373507c">$targetJson</a> [&quot;1&quot;][&quot;titulo&quot;] = &quot;prefeito&quot;</td></tr>
+<tr class="separator:a09899f35f37e86bd5b9fe0c5e373507c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696b5ffb02fe8e5a7983291f36e905b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#a696b5ffb02fe8e5a7983291f36e905b8">$targetJson</a> [&quot;1&quot;][&quot;numeros&quot;] = 2</td></tr>
+<tr class="separator:a696b5ffb02fe8e5a7983291f36e905b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae474e3f6dbbada239d455ea6d1ad56ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fill__json_8php.html#ae474e3f6dbbada239d455ea6d1ad56ba">$targetJson</a> [&quot;1&quot;][&quot;candidatos&quot;] = []</td></tr>
+<tr class="separator:ae474e3f6dbbada239d455ea6d1ad56ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p >Recupera os candidatos do banco de dados.</p>
+<p >Faz queries para o banco de dados, recuperando os candidados e os formatando em um arquivo json, que será consumido pelo frontend.</p>
+<p >PHP version 8.1.8 </p>
+</div><h2 class="groupheader">Variáveis</h2>
+<a id="aa8a5a87b9c1a6a0819b88447cbe41877" name="aa8a5a87b9c1a6a0819b88447cbe41877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a5a87b9c1a6a0819b88447cbe41877">&#9670;&nbsp;</a></span>$conn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$conn = new mysqli($server, $username, $password, $db)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fa3127fc82f96b1436d871ef02be319" name="a1fa3127fc82f96b1436d871ef02be319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa3127fc82f96b1436d871ef02be319">&#9670;&nbsp;</a></span>$db</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$db = substr($url[&quot;path&quot;], 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a607686ef9f99ea7c42f4f3dd3dbb2b0d" name="a607686ef9f99ea7c42f4f3dd3dbb2b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">&#9670;&nbsp;</a></span>$password</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$password = $url[&quot;pass&quot;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad135cc8a47e55f0829949cf62214170f" name="ad135cc8a47e55f0829949cf62214170f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad135cc8a47e55f0829949cf62214170f">&#9670;&nbsp;</a></span>$server</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$server = $url[&quot;host&quot;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e5c4028742bbbc3bdadbfd4751577d0" name="a6e5c4028742bbbc3bdadbfd4751577d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5c4028742bbbc3bdadbfd4751577d0">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[1/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$targetJson = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dbafffd2312999e97443d9b4f8d34f3" name="a8dbafffd2312999e97443d9b4f8d34f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dbafffd2312999e97443d9b4f8d34f3">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[2/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if($conn-&gt;connect_errno) if (! $result=$conn-&gt;query(&quot;SELECT Nome, Numero, Partido, Url_Foto FROM vereadores WHERE Nome != 'Nulo' and Nome != 'Branco';&quot;)) $targetJson[&quot;0&quot;] = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Faz as consultas dos candidatos, recuperando seu nome, número, partido e foto. </p>
+
+</div>
+</div>
+<a id="a16e8c0fd6506962ca8ba3065c4d644de" name="a16e8c0fd6506962ca8ba3065c4d644de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e8c0fd6506962ca8ba3065c4d644de">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[3/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$targetJson[&quot;0&quot;][&quot;candidatos&quot;] = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a535621f48ec1269ecd191a3cf1f6292f" name="a535621f48ec1269ecd191a3cf1f6292f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535621f48ec1269ecd191a3cf1f6292f">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[4/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$targetJson[&quot;0&quot;][&quot;numeros&quot;] = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5844127f22f9e80fe355a0d6b1b7e509" name="a5844127f22f9e80fe355a0d6b1b7e509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5844127f22f9e80fe355a0d6b1b7e509">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[5/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$targetJson[&quot;0&quot;][&quot;titulo&quot;] = &quot;vereador&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74bddfbe0eef69a8cc17095f2cb42ed9" name="a74bddfbe0eef69a8cc17095f2cb42ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74bddfbe0eef69a8cc17095f2cb42ed9">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[6/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if (! $result=$conn-&gt;query(&quot;SELECT p.Nome pNome, p.Numero pNumero, p.Partido pPartido, p.Url_Foto pUrl_Foto, v.Nome vNome, v.Partido vPartido, v.Url_Foto vUrl_Foto FROM prefeitos p JOIN vice_prefeitos v on p.ViceID = v.ID WHERE p.Nome != 'Nulo' and p.Nome != 'Branco';&quot;)) $targetJson[&quot;1&quot;] = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Faz as consultas dos candidatos, recuperando seu nome, número, partido e foto. No caso dos prefeitos, também recupera a informação dos seus vices. </p>
+
+</div>
+</div>
+<a id="ae474e3f6dbbada239d455ea6d1ad56ba" name="ae474e3f6dbbada239d455ea6d1ad56ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae474e3f6dbbada239d455ea6d1ad56ba">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[7/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$targetJson[&quot;1&quot;][&quot;candidatos&quot;] = []</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a696b5ffb02fe8e5a7983291f36e905b8" name="a696b5ffb02fe8e5a7983291f36e905b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a696b5ffb02fe8e5a7983291f36e905b8">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[8/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$targetJson[&quot;1&quot;][&quot;numeros&quot;] = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09899f35f37e86bd5b9fe0c5e373507c" name="a09899f35f37e86bd5b9fe0c5e373507c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09899f35f37e86bd5b9fe0c5e373507c">&#9670;&nbsp;</a></span>$targetJson <span class="overload">[9/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$targetJson[&quot;1&quot;][&quot;titulo&quot;] = &quot;prefeito&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf215f34a917d014776ce684a9ee8909" name="acf215f34a917d014776ce684a9ee8909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf215f34a917d014776ce684a9ee8909">&#9670;&nbsp;</a></span>$url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$url = parse_url(getenv(&quot;CLEARDB_DATABASE_URL&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0eb82aa5f81cf845de4b36cd653c42cf" name="a0eb82aa5f81cf845de4b36cd653c42cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb82aa5f81cf845de4b36cd653c42cf">&#9670;&nbsp;</a></span>$username</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$username = $url[&quot;user&quot;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

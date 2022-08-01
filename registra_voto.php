@@ -10,7 +10,7 @@
  * 
  * Já o número, indica o número do candidato, ou se o voto é nulo ou branco.
  *
- * PHP version 5.3+
+ * PHP version 8.1.8
  *
  * @file registra_voto.php
  *
@@ -44,7 +44,6 @@ $titulo = $data["titulo"];
  * De acordo com a etapa da votação e o o número do voto, faz um update no banco de dados.
  * O update consiste em somar em 1 os votos do candidato ou dos votos nulos ou brancos.
  */
-
 if($titulo == "vereador"){
     if($numVoto == "branco"){
         if(!$result = $conn->query("UPDATE vereadores SET Votos = Votos + 1 WHERE Nome = 'Branco';")) {
@@ -71,6 +70,10 @@ if($titulo == "vereador"){
         }
     }
 }
+/**
+ * De acordo com a etapa da votação e o o número do voto, faz um update no banco de dados.
+ * O update consiste em somar em 1 os votos do candidato ou dos votos nulos ou brancos.
+ */
 else if($titulo == "prefeito"){
     if($numVoto == "branco"){
         if(!$result = $conn->query("UPDATE prefeitos SET Votos = Votos + 1 WHERE Nome = 'Branco';")) {

@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Urna Eletrônica: Referência do Arquivo Web/registra_voto.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Urna Eletrônica<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','Busca');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8069eed1070612d812aa4ab345356666.html">Web</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo registra_voto.php</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:acf215f34a917d014776ce684a9ee8909"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a> = parse_url(getenv(&quot;CLEARDB_DATABASE_URL&quot;))</td></tr>
+<tr class="separator:acf215f34a917d014776ce684a9ee8909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad135cc8a47e55f0829949cf62214170f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#ad135cc8a47e55f0829949cf62214170f">$server</a> = $url[&quot;host&quot;]</td></tr>
+<tr class="separator:ad135cc8a47e55f0829949cf62214170f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb82aa5f81cf845de4b36cd653c42cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a> = $url[&quot;user&quot;]</td></tr>
+<tr class="separator:a0eb82aa5f81cf845de4b36cd653c42cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607686ef9f99ea7c42f4f3dd3dbb2b0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a> = $url[&quot;pass&quot;]</td></tr>
+<tr class="separator:a607686ef9f99ea7c42f4f3dd3dbb2b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa3127fc82f96b1436d871ef02be319"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#a1fa3127fc82f96b1436d871ef02be319">$db</a> = substr($url[&quot;path&quot;], 1)</td></tr>
+<tr class="separator:a1fa3127fc82f96b1436d871ef02be319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#aa8a5a87b9c1a6a0819b88447cbe41877">$conn</a> = new mysqli($server, $username, $password, $db)</td></tr>
+<tr class="separator:aa8a5a87b9c1a6a0819b88447cbe41877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6efc15b5a2314dd4b5aaa556a375c6d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a> = json_decode(file_get_contents('php://input'), true)</td></tr>
+<tr class="separator:a6efc15b5a2314dd4b5aaa556a375c6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8e9dbfcdaca87343cee33d56f1efb2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#a3e8e9dbfcdaca87343cee33d56f1efb2">$numVoto</a> = $data[&quot;numero&quot;]</td></tr>
+<tr class="separator:a3e8e9dbfcdaca87343cee33d56f1efb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894f35d0aa77bfe5d5bee433e34cdd8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="registra__voto_8php.html#a894f35d0aa77bfe5d5bee433e34cdd8f">$titulo</a> = $data[&quot;titulo&quot;]</td></tr>
+<tr class="separator:a894f35d0aa77bfe5d5bee433e34cdd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p >Registra os votos no banco de dados.</p>
+<p >Recebe dois valores, o tipo do voto e o valor do voto.</p>
+<p >O tipo do voto diz em qual etapa a votação está.</p>
+<p >Já o número, indica o número do candidato, ou se o voto é nulo ou branco.</p>
+<p >PHP version 8.1.8 </p>
+</div><h2 class="groupheader">Variáveis</h2>
+<a id="aa8a5a87b9c1a6a0819b88447cbe41877" name="aa8a5a87b9c1a6a0819b88447cbe41877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a5a87b9c1a6a0819b88447cbe41877">&#9670;&nbsp;</a></span>$conn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$conn = new mysqli($server, $username, $password, $db)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6efc15b5a2314dd4b5aaa556a375c6d6" name="a6efc15b5a2314dd4b5aaa556a375c6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6efc15b5a2314dd4b5aaa556a375c6d6">&#9670;&nbsp;</a></span>$data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$data = json_decode(file_get_contents('php://input'), true)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fa3127fc82f96b1436d871ef02be319" name="a1fa3127fc82f96b1436d871ef02be319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa3127fc82f96b1436d871ef02be319">&#9670;&nbsp;</a></span>$db</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$db = substr($url[&quot;path&quot;], 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e8e9dbfcdaca87343cee33d56f1efb2" name="a3e8e9dbfcdaca87343cee33d56f1efb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8e9dbfcdaca87343cee33d56f1efb2">&#9670;&nbsp;</a></span>$numVoto</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$numVoto = $data[&quot;numero&quot;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a607686ef9f99ea7c42f4f3dd3dbb2b0d" name="a607686ef9f99ea7c42f4f3dd3dbb2b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607686ef9f99ea7c42f4f3dd3dbb2b0d">&#9670;&nbsp;</a></span>$password</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$password = $url[&quot;pass&quot;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad135cc8a47e55f0829949cf62214170f" name="ad135cc8a47e55f0829949cf62214170f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad135cc8a47e55f0829949cf62214170f">&#9670;&nbsp;</a></span>$server</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$server = $url[&quot;host&quot;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a894f35d0aa77bfe5d5bee433e34cdd8f" name="a894f35d0aa77bfe5d5bee433e34cdd8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894f35d0aa77bfe5d5bee433e34cdd8f">&#9670;&nbsp;</a></span>$titulo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$titulo = $data[&quot;titulo&quot;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf215f34a917d014776ce684a9ee8909" name="acf215f34a917d014776ce684a9ee8909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf215f34a917d014776ce684a9ee8909">&#9670;&nbsp;</a></span>$url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$url = parse_url(getenv(&quot;CLEARDB_DATABASE_URL&quot;))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0eb82aa5f81cf845de4b36cd653c42cf" name="a0eb82aa5f81cf845de4b36cd653c42cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb82aa5f81cf845de4b36cd653c42cf">&#9670;&nbsp;</a></span>$username</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$username = $url[&quot;user&quot;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

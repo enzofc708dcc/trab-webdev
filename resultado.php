@@ -6,7 +6,7 @@
  * Caso haja um empate, ele retorna quais candidatos empataram.
  *
  * 
- * PHP version 5.3+
+ * PHP version 8.1.8
  *
  * @file resultado.php
  *
@@ -35,6 +35,11 @@ if ($conn->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 
+
+/**
+ * Recupera o candidato da tabela de vereadores com mais votos e a quantidade de votos que o candidato recebeu.
+ * Caso haja um empate, retorna quais candidatos empataram e a quantidade de votos.
+ */
 if(!$result = $conn->query("SELECT Nome, Votos FROM vereadores WHERE Nome != 'Nulo' and Nome != 'Branco' and Votos = (SELECT Votos FROM vereadores WHERE Nome != 'Nulo' and Nome != 'Branco' order by Votos desc LIMIT 1);")) {
     echo "Select failed: (" . $conn->errno . ") " . $conn->error;
 }
@@ -62,6 +67,10 @@ else{
     $response["vereador"]["result"] = "error";
 }
 
+/**
+ * Recupera o candidato da tabela de prefeito com mais votos e a quantidade de votos que o candidato recebeu.
+ * Caso haja um empate, retorna quais candidatos empataram e a quantidade de votos.
+ */
 if(!$result = $conn->query("SELECT p.Nome, p.Votos, v.Nome as vNome FROM prefeitos p JOIN vice_prefeitos v on p.ViceID = v.ID WHERE p.Nome != 'Nulo' and p.Nome != 'Branco' and p.Votos = (SELECT Votos FROM prefeitos WHERE Nome != 'Nulo' and Nome != 'Branco' order by Votos desc LIMIT 1);")) {
     echo "Select failed: (" . $conn->errno . ") " . $conn->error;
 }

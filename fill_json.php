@@ -5,7 +5,7 @@
  *
  * Faz queries para o banco de dados, recuperando os candidados e os formatando em um arquivo json, que será consumido pelo frontend.
  * 
- * PHP version 5.3+
+ * PHP version 8.1.8
  *
  * @file fill_json.php
  *
@@ -37,7 +37,6 @@ if ($conn->connect_errno) {
 
 /**
  * Faz as consultas dos candidatos, recuperando seu nome, número, partido e foto.
- * No caso dos prefeitos, também recupera a informação dos seus vices.
  */
 if(!$result = $conn->query("SELECT Nome, Numero, Partido, Url_Foto FROM vereadores WHERE Nome != 'Nulo' and Nome != 'Branco';")) {
     echo "Select failed: (" . $conn->errno . ") " . $conn->error;
@@ -57,6 +56,10 @@ while($row = $result->fetch_assoc()){
 
 $result->close();
 
+/**
+ * Faz as consultas dos candidatos, recuperando seu nome, número, partido e foto.
+ * No caso dos prefeitos, também recupera a informação dos seus vices.
+ */
 if(!$result = $conn->query("SELECT p.Nome pNome, p.Numero pNumero, p.Partido pPartido, p.Url_Foto pUrl_Foto, v.Nome vNome, v.Partido vPartido, v.Url_Foto vUrl_Foto FROM prefeitos p JOIN vice_prefeitos v on p.ViceID = v.ID WHERE p.Nome != 'Nulo' and p.Nome != 'Branco';")) {
     echo "Select failed: (" . $conn->errno . ") " . $conn->error;
 }
